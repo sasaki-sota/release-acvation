@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  firebase-next-app:
+    build:
+      context: firebase-next-app/
+      dockerfile: Dockerfile
+    volumes:
+      - ./firebase-next-app/app:/usr/src/app
+    command: "npm run dev"
+    ports:
+      - "3000:3000"
